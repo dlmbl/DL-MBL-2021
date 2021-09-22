@@ -1,0 +1,1 @@
+Solutions to exercise 0 can be found in `exercise-0-solutions.ipynb`.
