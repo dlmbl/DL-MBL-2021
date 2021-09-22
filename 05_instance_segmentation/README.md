@@ -5,13 +5,13 @@
 Create a `conda` environment for this exercise and activate it:
 
 ```
-conda create -n 07_instance_segmentation python
-conda activate 07_instance_segmentation
+conda create -n 05_instance_segmentation python
+conda activate 05_instance_segmentation
 ```
 If conda activate <env_name> doesn't work, use
 
 ```
-source activate 07_instance_segmentation
+source activate 05_instance_segmentation
 ```
 After entering this virtual environment, install pytorch, ipykernel and ipywidgets by using the following command
 
