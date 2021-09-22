@@ -1,6 +1,6 @@
-## 1. Setup for the local machine or the AWS 
----
-### 1.1 In the terminal
+# Exercise 5: Instance Segmentation
+
+## Setup
 
 Create a `conda` environment for this exercise and activate it:
 
@@ -8,11 +8,7 @@ Create a `conda` environment for this exercise and activate it:
 conda create -n 05_instance_segmentation python
 conda activate 05_instance_segmentation
 ```
-If conda activate <env_name> doesn't work, use
 
-```
-source activate 05_instance_segmentation
-```
 After entering this virtual environment, install pytorch, ipykernel and ipywidgets by using the following command
 
 ```
@@ -25,20 +21,15 @@ conda install -c conda-forge ipywidgets
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
 ```
 
-and continue with the instructions in the notebook.
+Start Jupyter within this environment:
 
-### 1.2 In the notebook
+```
+jupyter notebook
+```
 
-Start with the following code:
-```
-%conda install -c conda-forge matplotlib 
-%conda install -c anaconda scipy
-!pip install tqdm h5py zarr pillow numpy imgaug==0.4.0 mahotas #imgaug has dependency on previous packages
-!pip install scikit-image
-!pip install tensorboard
-!pip install torchsummary
-```
-## 2. Setup for the Google Colab 
+...and continue with the instructions in the notebook.
+
+## Setup for the Google Colab
 ---
 ### Google Colab brief intro
 
