@@ -47,7 +47,7 @@ Create an empty folder with name you wish (e.g, image-anaylsis-tutorial) and upl
 
 Use GPU:  just follow **Edit > Notebook settings** or **Runtime>Change runtime type** and select GPU as Hardware accelerator.
 
-Start with the following code in your notebook which will mount the driver and change the current working directory to the given path. Remember to set the **path** variable according to the folder name you created in **step 2.1**
+Start with the following code in your notebook which will mount the driver and change the current working directory to the given path. Remember to set the **path** variable according to the folder name you created in **step 2.1**.
 
 ```
 from google.colab import drive
@@ -72,6 +72,7 @@ Then install the following packages in the notebook, remember to check that the 
 
 ## 3. Introduction to the exercise
 ---
+Only the **epithelia_segmentation_challenge.ipynb** needs some extra code implementation.
 
 - 1.foreground_segmentation.ipynb
 
@@ -81,7 +82,7 @@ Then install the following packages in the notebook, remember to check that the 
 
     data: data_kaggle_test
 
-- 3.epithelia_segmentation_challenge.ipynb
+- 3.epithelia_segmentation_challenge.ipynb (**need extra code implementation**)
 
     data: data_epithelia
 
@@ -93,5 +94,10 @@ Then install the following packages in the notebook, remember to check that the 
 
     pretrained_net: net_60000
 
+- 5.Image_Analysis_intro.ipynb
+
+    data: CIFAR-10
+
 Please look into the respective .ipynb file to see the details. For some exercise, it would be better to run on GPU. 
-Only the epithelia_segmentation_challenge.ipynb needs some extra code implementation
+
+
