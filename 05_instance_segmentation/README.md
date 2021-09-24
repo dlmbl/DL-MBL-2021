@@ -29,48 +29,8 @@ jupyter notebook
 
 ...and continue with the instructions in the notebook.
 
-## Setup for the Google Colab
----
-### Google Colab brief intro
 
-**Requirements** To use Colab, you must have a Google account with an associated Google Drive.
-
-**Reminder** Ressources on colab are not guaranteed and therefore there might be times where some ressources cannot get allocated. If you're idle for 90 minutes or your connection time exceeds the maximum of 12 hours, the colab virtual machine will disconnect. This means that unsaved progress such as model parameters are lost. 
-
-### 2.1 In the Google Driver
-
-Open the Google Chrome browser and open your google driver when you log into your google account.
-
-Create an empty folder with name you wish (e.g, image-anaylsis-tutorial) and upload all .ipynb files and other necessary files into that folder.
-
-### 2.2 In the notebook
-
-Use GPU:  just follow **Edit > Notebook settings** or **Runtime>Change runtime type** and select GPU as Hardware accelerator.
-
-Start with the following code in your notebook which will mount the driver and change the current working directory to the given path. Remember to set the **path** variable according to the folder name you created in **step 2.1**.
-
-```
-from google.colab import drive
-drive.mount('/content/drive')
-import os
-path = "/content/drive/My Drive/image-analysis-tutorial" # path="/content/drive/My Drive/<folder name>"
-os.chdir(path)
-```
-
-Run the above cell and grant permissions according to the instructions shown.
-
-
-Then install the following packages in the notebook, remember to check that the imagug version is 0.4.0.
-
-```
-!pip uninstall albumentations -y
-!pip install tqdm h5py zarr pillow numpy imgaug==0.4.0 mahotas #imgaug has dependency on previous packages
-!pip install scikit-image
-!pip install tensorboard
-!pip install torchsummary
-```
-
-## 3. Introduction to the exercise
+## HOW-TO: Introduction to the exercise
 ---
 Only the **epithelia_segmentation_challenge.ipynb** needs some extra code implementation.
 
@@ -78,25 +38,29 @@ Only the **epithelia_segmentation_challenge.ipynb** needs some extra code implem
 
     data: example_toy_data
 
+    In this notebook, you will do semnatic segmentation on synthetical data and you will get in touch with the concept of early stopping and the data generator which helps to avoid overfitting.
+
 - 2.instance_segmentation.ipynb
 
     data: data_kaggle_test
 
-- 3.epithelia_segmentation_challenge.ipynb (**need extra code implementation**)
+    In this notebook, you will move from semnatic segmentation to instance segmetation. You will try to use different kinds of labels/annotations to train an UNet to do instance segmentation.
 
-    data: data_epithelia
-
-    solution: example_epithelia_segmentation.ipynb
-
-- 4.tile_and_stitch.ipynb
+- 3.tile_and_stitch.ipynb
 
     data: data_kaggle_test
 
     pretrained_net: net_60000
 
-- 5.Image_Analysis_intro.ipynb
+    This notebook is the extension of the instance_segmentation.ipynb notebook. You will just work on metric learning scenario. You will use an UNet with valid padding which has the periodic shift-equivariance property. This property helps to reduce the false splits when you deal with the large images in Tile & Stitch manner if you apply some specific rules.
 
-    data: CIFAR-10
+- 4.epithelia_segmentation_challenge.ipynb (**need extra code implementation**)
+
+    data: data_epithelia
+
+    solution: example_epithelia_segmentation.ipynb
+
+    In this notebook, you will need to fill in some code and you will do instance segmentation on the epithelica data. By applying the knowledge you got from the previous three exercise, especially the second one, you will easily work out the questions.
 
 Please look into the respective .ipynb file to see the details. For some exercise, it would be better to run on GPU. 
 
