@@ -1,12 +1,12 @@
-# Exercise 5: Instance Segmentation
+# Exercise 6: Instance Segmentation
 
 ## Setup
 
 Create a `conda` environment for this exercise and activate it:
 
 ```
-conda create -n 05_instance_segmentation python
-conda activate 05_instance_segmentation
+conda create -n 06_instance_segmentation python
+conda activate 06_instance_segmentation
 ```
 
 After entering this virtual environment, install pytorch, ipykernel and ipywidgets by using the following command
