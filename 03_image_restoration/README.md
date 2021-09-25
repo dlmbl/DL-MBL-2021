@@ -1,4 +1,4 @@
-# Exercise 3: Image Restauration
+# Exercise 3: Image Restoration
 
 ## Setup
 
